@@ -28,11 +28,11 @@ class LocationA {
     render() {
         return `
         <div class="card my-4 col-md-6 col-lg-3" style="width: 25rem;">
-        <img src="${this.img}" class="card-img-top img-thumbnail d-md-block d-sm-none " alt="${this.address}">
+        <img src="${this.img}" class="card-img-top img-thumbnail d-none d-md-block" alt="${this.address}">
         <div class="card-body">
             <p class="card-text font-weight-bold text-center">Land mark: ${this.name}</p>
             <ul>
-                <li class="card-text">Location : ${this.address}, ${this.zipCode}, ${this.city}</li>
+                <li class="card-text">Location: ${this.address}, ${this.zipCode}, ${this.city}</li>
             </ul>
             <p class="card-text"><small class="text-muted">Create this.dateTime</small></p>
         </div>
@@ -54,11 +54,11 @@ class Restaurant extends LocationA {
     render() {
         return `
         <div class="card my-4 col-md-6 col-lg-3" style="width: 25rem;">
-        <img src="${this.img}" class="card-img-top img-thumbnail d-md-block d-sm-none " alt="${this.type} restaurant">
+        <img src="${this.img}" class="card-img-top img-thumbnail d-none d-md-block" alt="${this.type} restaurant">
         <div class="card-body">
             <p class="card-text font-weight-bold text-center">${this.name} ${this.type} Restaurant</p> 
             <ul>
-                <li class="card-text">Location : ${this.address}, ${this.zipCode}, ${this.city}</li>
+                <li class="card-text">Location: ${this.address}, ${this.zipCode}, ${this.city}</li>
                 <li class="card-text">Contact us under: ${this.telephoneNumber}</li>
                 <li class="card-text">More information <a href='${this.webAddress}'>here</a> </li>
             </ul>
@@ -85,11 +85,11 @@ class Events extends LocationA {
     render() {
         return `
         <div class="card my-4 col-md-6 col-lg-3" style="width: 25rem;">
-        <img src="${this.img}" class="card-img-top img-thumbnail d-xs-none d-sm-none d-md-block" alt="${this.name} restaurant">
+        <img src="${this.img}" class="card-img-top img-thumbnail d-none d-md-block" alt="${this.name} restaurant">
         <div class="card-body">
             <p class="card-text font-weight-bold text-center">${this.name}</p>    
-            ul>
-                <li class="card-text">Location :${this.eventLocation} ${this.address}, ${this.zipCode}, ${this.city}</li>
+            <ul>
+                <li class="card-text">Location: ${this.eventLocation} ${this.address}, ${this.zipCode}, ${this.city}</li>
                 <li class="card-text">Event timings: ${this.eventTime}, ${this.eventDate}</li>
                 <li class="card-text">Entry fee per person: ${this.ticketPrice}€ </li>
                 <li class="card-text">More information <a href='${this.webAddress}'>here</a> </li>
@@ -138,7 +138,7 @@ new Restaurant(
     // ),
     '+43(1)5812308',
     'Thai',
-    'www.lemonleaf.at'
+    'http://www.lemonleaf.at/'
 );
 new Restaurant(
     'Vienna',
@@ -180,7 +180,7 @@ new Events(
     // new Date(
     //     Date.UTC(2012, 11, 20, 3, 0, 0)
     // ),
-    'www.lennykravitz.com/',
+    'http://www.lennykravitz.com/',
     'Sat., 09.112.2029',
     '19:30',
     '47,80',

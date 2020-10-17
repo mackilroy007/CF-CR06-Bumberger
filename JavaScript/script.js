@@ -31,7 +31,7 @@ var LocationA = /** @class */ (function () {
     }
     //default displayment of content
     LocationA.prototype.render = function () {
-        return "\n        <div class=\"card my-4 col-md-6 col-lg-3\" style=\"width: 25rem;\">\n        <img src=\"" + this.img + "\" class=\"card-img-top img-thumbnail d-md-block d-sm-none \" alt=\"" + this.address + "\">\n        <div class=\"card-body\">\n            <p class=\"card-text font-weight-bold text-center\">Land mark: " + this.name + "</p>\n            <ul>\n                <li class=\"card-text\">Location : " + this.address + ", " + this.zipCode + ", " + this.city + "</li>\n            </ul>\n            <p class=\"card-text\"><small class=\"text-muted\">Create this.dateTime</small></p>\n        </div>\n      </div>\n        ";
+        return "\n        <div class=\"card my-4 col-md-6 col-lg-3\" style=\"width: 25rem;\">\n        <img src=\"" + this.img + "\" class=\"card-img-top img-thumbnail d-none d-md-block\" alt=\"" + this.address + "\">\n        <div class=\"card-body\">\n            <p class=\"card-text font-weight-bold text-center\">Land mark: " + this.name + "</p>\n            <ul>\n                <li class=\"card-text\">Location: " + this.address + ", " + this.zipCode + ", " + this.city + "</li>\n            </ul>\n            <p class=\"card-text\"><small class=\"text-muted\">Create this.dateTime</small></p>\n        </div>\n      </div>\n        ";
     };
     return LocationA;
 }());
@@ -45,7 +45,7 @@ var Restaurant = /** @class */ (function (_super) {
         return _this;
     }
     Restaurant.prototype.render = function () {
-        return "\n        <div class=\"card my-4 col-md-6 col-lg-3\" style=\"width: 25rem;\">\n        <img src=\"" + this.img + "\" class=\"card-img-top img-thumbnail d-md-block d-sm-none \" alt=\"" + this.type + " restaurant\">\n        <div class=\"card-body\">\n            <p class=\"card-text font-weight-bold text-center\">" + this.name + " " + this.type + " Restaurant</p> \n            <ul>\n                <li class=\"card-text\">Location : " + this.address + ", " + this.zipCode + ", " + this.city + "</li>\n                <li class=\"card-text\">Contact us under: " + this.telephoneNumber + "</li>\n                <li class=\"card-text\">More information <a href='" + this.webAddress + "'>here</a> </li>\n            </ul>\n        </div>\n      </div>\n        ";
+        return "\n        <div class=\"card my-4 col-md-6 col-lg-3\" style=\"width: 25rem;\">\n        <img src=\"" + this.img + "\" class=\"card-img-top img-thumbnail d-none d-md-block\" alt=\"" + this.type + " restaurant\">\n        <div class=\"card-body\">\n            <p class=\"card-text font-weight-bold text-center\">" + this.name + " " + this.type + " Restaurant</p> \n            <ul>\n                <li class=\"card-text\">Location: " + this.address + ", " + this.zipCode + ", " + this.city + "</li>\n                <li class=\"card-text\">Contact us under: " + this.telephoneNumber + "</li>\n                <li class=\"card-text\">More information <a href='" + this.webAddress + "'>here</a> </li>\n            </ul>\n        </div>\n      </div>\n        ";
     };
     return Restaurant;
 }(LocationA));
@@ -61,7 +61,7 @@ var Events = /** @class */ (function (_super) {
         return _this;
     }
     Events.prototype.render = function () {
-        return "\n        <div class=\"card my-4 col-md-6 col-lg-3\" style=\"width: 25rem;\">\n        <img src=\"" + this.img + "\" class=\"card-img-top img-thumbnail d-xs-none d-sm-none d-md-block\" alt=\"" + this.name + " restaurant\">\n        <div class=\"card-body\">\n            <p class=\"card-text font-weight-bold text-center\">" + this.name + "</p>    \n            ul>\n                <li class=\"card-text\">Location :" + this.eventLocation + " " + this.address + ", " + this.zipCode + ", " + this.city + "</li>\n                <li class=\"card-text\">Event timings: " + this.eventTime + ", " + this.eventDate + "</li>\n                <li class=\"card-text\">Entry fee per person: " + this.ticketPrice + "\u20AC </li>\n                <li class=\"card-text\">More information <a href='" + this.webAddress + "'>here</a> </li>\n            </ul>\n        </div>\n      </div>\n        ";
+        return "\n        <div class=\"card my-4 col-md-6 col-lg-3\" style=\"width: 25rem;\">\n        <img src=\"" + this.img + "\" class=\"card-img-top img-thumbnail d-none d-md-block\" alt=\"" + this.name + " restaurant\">\n        <div class=\"card-body\">\n            <p class=\"card-text font-weight-bold text-center\">" + this.name + "</p>    \n            <ul>\n                <li class=\"card-text\">Location: " + this.eventLocation + " " + this.address + ", " + this.zipCode + ", " + this.city + "</li>\n                <li class=\"card-text\">Event timings: " + this.eventTime + ", " + this.eventDate + "</li>\n                <li class=\"card-text\">Entry fee per person: " + this.ticketPrice + "\u20AC </li>\n                <li class=\"card-text\">More information <a href='" + this.webAddress + "'>here</a> </li>\n            </ul>\n        </div>\n      </div>\n        ";
     };
     return Events;
 }(LocationA));
@@ -74,7 +74,7 @@ new Restaurant('Vienna', '1050', 'Kettenbrückengasse 19', 'img/Lemon-leaf.png',
 // new Date(
 //     Date.UTC(2012, 11, 20, 3, 0, 0)
 // ),
-'+43(1)5812308', 'Thai', 'www.lemonleaf.at');
+'+43(1)5812308', 'Thai', 'http://www.lemonleaf.at/');
 new Restaurant('Vienna', '1050', 'Schönbrunner Straße 21', 'img/Sixta.png', 'SIXTA', 
 // new Date(
 //     Date.UTC(2012, 11, 20, 3, 0, 0)
@@ -90,7 +90,7 @@ new Events('Vienna', '1150', 'Roland Rainer Platz 1', 'img/Lenny-k.jpg', 'Lenny 
 // new Date(
 //     Date.UTC(2012, 11, 20, 3, 0, 0)
 // ),
-'www.lennykravitz.com/', 'Sat., 09.112.2029', '19:30', '47,80', 'Wiener Stadthalle Halle D');
+'http://www.lennykravitz.com/', 'Sat., 09.112.2029', '19:30', '47,80', 'Wiener Stadthalle Halle D');
 // print out class content on to the html file using the arr
 for (var _i = 0, arr_1 = arr; _i < arr_1.length; _i++) {
     var i = arr_1[_i];
